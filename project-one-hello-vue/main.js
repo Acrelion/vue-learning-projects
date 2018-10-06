@@ -5,7 +5,7 @@ new Vue({
     data: {
         title: 'Hello Vue!'
     },
-    //
+    //methods (this is an event handler, binded by the vue directive on input event)
     methods: {
         changeTitle: function(event) {
             /**
