@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Templates</title>
+</head>
+<body>
+
+    <div id="app">
+        <!-- Title to be rendered only once/not change on value change. Check directive v-once. -->
+        <h3 v-once>My once rendered title</h3>
+        <p>{{ title }}</p>
+        <p>{{ printText() }}</p>
+        <!-- use curly braces only for text, use directives (bind) for attributes -->
+        <p>Dynamic bind for link: <a v-bind:href="link.address">{{link.linkText}}</a></p>
+        <br>
+        <div>
+            <!-- use v-html to add html code -->
+            <p v-html="readyHtml"></p>
+        </div>
+    </div>
+
+    <!-- development version, includes helpful console warnings -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
